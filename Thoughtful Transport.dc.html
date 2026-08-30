@@ -55,6 +55,7 @@ input, textarea, select, button { font-family:'Newsreader', Georgia, serif; font
 img, image-slot { max-width:100%; }
 main img, main image-slot { border-radius:14px; }
 .desktop-nav-links { display:flex; align-items:center; gap:8px; }
+.desktop-call-link { display:flex; }
 .mobile-menu-toggle,
 .mobile-menu-panel { display:none; }
 .hero-headline {
@@ -223,6 +224,7 @@ main img, main image-slot { border-radius:14px; }
     width:100% !important;
     padding-top:4px !important;
   }
+  .desktop-call-link { display:none !important; }
   header nav {
     display:contents !important;
   }
@@ -235,12 +237,13 @@ main img, main image-slot { border-radius:14px; }
     letter-spacing:0 !important;
     border-radius:10px !important;
   }
-  header nav a[href^="tel"] {
+  .mobile-menu-panel a[href^="tel"] {
     grid-column:1 / -1 !important;
-    grid-row:2 !important;
     width:100% !important;
     margin-left:0 !important;
     height:52px !important;
+    background:#E08C82 !important;
+    color:#22332C !important;
     font-size:18px !important;
     justify-content:center !important;
   }
@@ -286,13 +289,14 @@ main img, main image-slot { border-radius:14px; }
           <a href="#" onClick="{{ goServices }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C">Services</a>
           <a href="#" onClick="{{ goContact }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C">Contact</a>
         </div>
-        <a href="tel:+18082201263" style="display:flex; align-items:center; height:46px; margin-left:8px; padding:0 22px; background:#E08C82; color:#22332C; text-decoration:none; font-size:19px; letter-spacing:0.02em; border-radius:14px; white-space:nowrap" style-hover="background:#CE7469">Call (808) 220-1263</a>
+        <a class="desktop-call-link" href="tel:+18082201263" style="display:flex; align-items:center; height:46px; margin-left:8px; padding:0 22px; background:#E08C82; color:#22332C; text-decoration:none; font-size:19px; letter-spacing:0.02em; border-radius:14px; white-space:nowrap" style-hover="background:#CE7469">Call (808) 220-1263</a>
         <sc-if value="{{ mobileNavOpen }}" hint-placeholder-val="{{ false }}">
           <div class="mobile-menu-panel">
             <a href="#" onClick="{{ goHome }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C; color:#1E332C">Home</a>
             <a href="#" onClick="{{ goAbout }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C">About</a>
             <a href="#" onClick="{{ goServices }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C">Services</a>
             <a href="#" onClick="{{ goContact }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C">Contact</a>
+            <a href="tel:+18082201263" style="display:flex; align-items:center; height:52px; padding:0 22px; background:#E08C82; color:#22332C; text-decoration:none; font-size:19px; letter-spacing:0.02em; border-radius:14px; white-space:nowrap" style-hover="background:#CE7469">Call (808) 220-1263</a>
           </div>
         </sc-if>
       </nav>
