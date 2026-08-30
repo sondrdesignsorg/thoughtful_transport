@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Thoughtful Transport LLC — Non-Emergency Wheelchair Transportation on Oahu</title>
+<meta name="description" content="Thoughtful Transport LLC provides trusted non-emergency, wheelchair-accessible transportation across Oahu — medical appointments, dialysis, discharges and airport runs. Locally owned. Call (808) 220-1263, 7am–9pm daily." />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<meta name="geo.region" content="US-HI" />
+<meta name="geo.placename" content="Honolulu, Oahu, Hawaii" />
+<meta property="og:title" content="Thoughtful Transport LLC — Non-Emergency Wheelchair Transportation on Oahu" />
+<meta property="og:description" content="Compassionate, wheelchair-accessible rides across Oahu. Locally owned and family run. Call (808) 220-1263." />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://www.thoughtfultransport.net/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#BEE0D6">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#BEE0D6"/><circle cx="100" cy="100" r="34" fill="#E4AC3E"/><circle cx="100" cy="100" r="10" fill="#E08C82"/></svg>
+</template>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["LocalBusiness","MedicalBusiness"],"name":"Thoughtful Transport LLC","description":"Non-emergency, wheelchair-accessible transportation across the island of Oahu.","telephone":"+1-808-220-1263","url":"https://www.thoughtfultransport.net/","areaServed":[{"@type":"Place","name":"Oahu, Hawaii"},{"@type":"City","name":"Honolulu"},{"@type":"City","name":"Kaneohe"},{"@type":"City","name":"Kailua"},{"@type":"City","name":"Aiea"},{"@type":"City","name":"Pearl City"},{"@type":"City","name":"Waipahu"},{"@type":"City","name":"Ewa Beach"},{"@type":"City","name":"Kapolei"},{"@type":"City","name":"Mililani"},{"@type":"City","name":"Wahiawa"}],"address":{"@type":"PostalAddress","addressRegion":"HI","addressCountry":"US","addressLocality":"Honolulu"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"21:00"}],"priceRange":"$$"}
+</script>
+<style>
+html, body { margin:0; padding:0; }
+body::before {
+  content:''; position:fixed; inset:0; z-index:-2;
+  background-color:#BEE0D6;
+  background-image:url('assets/bg-watercolor.jpg');
+  background-size:cover; background-position:center top;
+}
+body {
+  background-color:#BEE0D6;
+  background-image:url('assets/bg-watercolor.jpg');
+  background-size:cover;
+  background-position:center top;
+  background-attachment:scroll;
+  color:#1E332C;
+  font-family:'Newsreader', Georgia, serif;
+  font-size:20px;
+  line-height:1.65;
+  text-wrap:pretty;
+  -webkit-font-smoothing:antialiased;
+}
+a { color:#0F5C4C; text-decoration-thickness:1px; text-underline-offset:3px; }
+a:hover { color:#B4534C; }
+::selection { background:#F0C79A; }
+input, textarea, select, button { font-family:'Newsreader', Georgia, serif; font-size:19px; color:#1E332C; }
+img, image-slot { max-width:100%; }
+main img, main image-slot { border-radius:14px; }
+.desktop-nav-links { display:flex; align-items:center; gap:8px; }
+.mobile-menu-toggle,
+.mobile-menu-panel { display:none; }
+.hero-headline {
+  margin:0 auto;
+  color:#FFE600;
+  font-family:'Instrument Serif', Georgia, serif;
+  font-weight:400;
+  font-size:86px;
+  line-height:1.18;
+  letter-spacing:0.02em;
+  max-width:26ch;
+  text-align:center;
+  text-wrap:balance;
+  transform:translateY(-18px);
+  text-shadow:
+    0 3px 0 rgba(0,0,0,0.9),
+    0 0 18px rgba(0,0,0,0.95),
+    0 0 38px rgba(0,0,0,0.9);
+}
+.hero-subtitles {
+  position:relative;
+  width:min(100%, 760px);
+  min-height:92px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+  transform:translateY(-9px);
+}
+.hero-subtitles span {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 18px;
+  color:#FFE600;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:42px;
+  font-weight:500;
+  line-height:1.18;
+  letter-spacing:0;
+  text-wrap:balance;
+  text-shadow:
+    0 3px 0 rgba(0,0,0,0.9),
+    0 0 16px rgba(0,0,0,0.95),
+    0 0 34px rgba(0,0,0,0.85);
+  opacity:0;
+  transform:translateY(18px);
+  animation:heroSubtitleCycle 40s infinite;
+}
+.hero-subtitles span:nth-child(2) { animation-delay:5s; }
+.hero-subtitles span:nth-child(3) { animation-delay:10s; }
+.hero-subtitles span:nth-child(4) { animation-delay:15s; }
+.hero-subtitles span:nth-child(5) { animation-delay:20s; }
+.hero-subtitles span:nth-child(6) { animation-delay:25s; }
+.hero-subtitles span:nth-child(7) { animation-delay:30s; }
+.hero-subtitles span:nth-child(8) { animation-delay:35s; }
+@keyframes heroSubtitleCycle {
+  0%, 6% { opacity:0; transform:translateY(18px); }
+  8%, 18% { opacity:1; transform:translateY(0); }
+  20%, 100% { opacity:0; transform:translateY(-16px); }
+}
+.video-section-title {
+  margin:0 0 10px;
+  color:#FFE600;
+  font-family:'Instrument Serif', Georgia, serif;
+  font-weight:400;
+  font-size:52px;
+  line-height:1.08;
+  letter-spacing:0.02em;
+}
+.video-section-subtitle {
+  margin:0 0 40px;
+  color:#FFE600;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:28px;
+  font-weight:400;
+  line-height:1.2;
+  letter-spacing:0;
+  text-shadow:
+    0 2px 0 rgba(0,0,0,0.85),
+    0 0 16px rgba(0,0,0,0.95),
+    0 0 30px rgba(0,0,0,0.85);
+}
+@media (max-width:1040px) {
+  main h1 { font-size:46px !important; }
+  main h2 { font-size:32px !important; }
+  main blockquote p { font-size:28px !important; }
+  main section[style*="grid-template-columns"],
+  main div[style*="grid-template-columns"],
+  footer div[style*="grid-template-columns"] { grid-template-columns:1fr !important; }
+  header > div { flex-wrap:wrap !important; flex-direction:column !important; align-items:stretch !important; gap:12px !important; padding-top:12px !important; padding-bottom:12px !important; }
+  header nav { justify-content:center !important; }
+  header nav a { font-size:17px !important; padding:0 13px !important; }
+  header nav { flex-wrap:wrap !important; margin-left:0 !important; }
+  header a span[style*="Great Vibes"] { font-size:32px !important; }
+  main section { padding-top:44px !important; padding-bottom:44px !important; }
+  main [data-m="card"], main aside, main form, main blockquote { padding:32px 28px !important; }
+  .hero-headline { font-size:66px; }
+  .hero-subtitles span { font-size:34px; }
+  .video-section-title { font-size:42px; }
+  .video-section-subtitle { font-size:24px; }
+}
+@media (max-width:700px) {
+  body { font-size:19px; }
+  main [data-m="measure"] { max-width:100% !important; }
+  main h1 { font-size:38px !important; line-height:1.2 !important; letter-spacing:0.01em !important; }
+  main h2 { font-size:28px !important; }
+  main h3 { font-size:24px !important; }
+  main blockquote p { font-size:24px !important; }
+  main [data-m="lede"] { font-size:20px !important; }
+  main section { padding:36px 20px !important; }
+  main [data-m="card"], main article, main aside, main form, main blockquote { padding:26px 22px !important; width:auto !important; }
+  .hero-headline { font-size:51px; }
+  .hero-subtitles { min-height:118px; }
+  .hero-subtitles span { font-size:26px; padding:0; }
+  .video-section-title { font-size:34px; }
+  .video-section-subtitle { font-size:22px; margin-bottom:30px; }
+  main [data-m="photo"] { transform:none !important; padding:10px !important; }
+  main image-slot { height:230px !important; }
+  main [data-m="cta"] { display:block !important; width:100% !important; box-sizing:border-box !important; text-align:center !important; }
+  main [data-m="btn-row"] { flex-direction:column !important; align-items:stretch !important; }
+  main aside p a[href^="tel"]:not([data-m]) { font-size:32px !important; }
+  header > div {
+    display:grid !important;
+    grid-template-columns:minmax(0, 1fr) 52px !important;
+    align-items:center !important;
+    gap:10px !important;
+    padding:10px 16px 12px !important;
+  }
+  header > div > a { justify-content:flex-start !important; min-width:0 !important; }
+  header a span[style*="Great Vibes"] { font-size:29px !important; text-align:left !important; }
+  .desktop-nav-links { display:none !important; }
+  .mobile-menu-toggle {
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:52px !important;
+    height:52px !important;
+    padding:0 !important;
+    border:1px solid rgba(30,51,44,0.24) !important;
+    border-radius:12px !important;
+    background:#FCF8F0 !important;
+    color:#1E332C !important;
+    cursor:pointer !important;
+    grid-column:2 !important;
+    grid-row:1 !important;
+    justify-self:end !important;
+  }
+  .mobile-menu-toggle span {
+    display:block !important;
+    width:22px !important;
+    height:2px !important;
+    background:currentColor !important;
+    margin:3px 0 !important;
+  }
+  .mobile-menu-panel {
+    display:grid !important;
+    grid-column:1 / -1 !important;
+    grid-row:3 !important;
+    grid-template-columns:1fr !important;
+    gap:6px !important;
+    width:100% !important;
+    padding-top:4px !important;
+  }
+  header nav {
+    display:contents !important;
+  }
+  header nav a {
+    height:44px !important;
+    min-width:0 !important;
+    padding:0 10px !important;
+    justify-content:center !important;
+    font-size:15px !important;
+    letter-spacing:0 !important;
+    border-radius:10px !important;
+  }
+  header nav a[href^="tel"] {
+    grid-column:1 / -1 !important;
+    grid-row:2 !important;
+    width:100% !important;
+    margin-left:0 !important;
+    height:52px !important;
+    font-size:18px !important;
+    justify-content:center !important;
+  }
+  .mobile-menu-panel a {
+    grid-column:1 / -1 !important;
+    background:rgba(252,248,240,0.94) !important;
+  }
+  footer > div { padding:36px 20px 20px !important; }
+  footer p[style*="Great Vibes"] { font-size:34px !important; }
+  img[aria-hidden="true"] { width:74vw !important; right:-24vw !important; bottom:-14vw !important; opacity:0.55 !important; }
+}
+</style>
+</helmet>
+
+<sc-if value="{{ showDecorativeHibiscus }}" hint-placeholder-val="{{ false }}">
+  <img src="assets/hibiscus.png" alt="" aria-hidden="true" style="mix-blend-mode:multiply; position:fixed; right:-40px; bottom:-60px; width:min(46vw, 560px); z-index:-1; pointer-events:none; user-select:none" />
+</sc-if>
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <video data-home-bg-video="" aria-hidden="true" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:fixed; inset:0; width:100vw; height:100vh; object-fit:cover; z-index:0; pointer-events:none; user-select:none">
+    <source src="assets/backdrop_vid_V3.mp4" type="video/mp4" />
+  </video>
+</sc-if>
+
+<div style="min-height:100vh; display:flex; flex-direction:column; position:relative; z-index:1">
+
+  <header style="position:sticky; top:0; z-index:40; background:rgba(252,248,240,0.88); backdrop-filter:blur(10px); border-bottom:1px solid rgba(30,51,44,0.12)">
+    <div style="max-width:1200px; margin:0 auto; padding:14px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:nowrap">
+      <a href="#" onClick="{{ goHome }}" style="display:flex; align-items:center; gap:14px; text-decoration:none; color:#1E332C; flex:0 0 auto">
+        <span style="display:flex; flex-direction:column; line-height:1">
+          <span style="font-family:'Great Vibes', cursive; font-size:40px; color:#D97B72; line-height:1.05">Thoughtful Transport</span>
+        </span>
+      </a>
+      <nav aria-label="Main" style="display:flex; align-items:center; gap:8px; flex-wrap:nowrap; margin-left:auto">
+        <button type="button" class="mobile-menu-toggle" aria-label="Open page menu" onClick="{{ toggleMobileNav }}">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="desktop-nav-links">
+          <a href="#" onClick="{{ goHome }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C; color:#1E332C">Home</a>
+          <a href="#" onClick="{{ goAbout }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C">About</a>
+          <a href="#" onClick="{{ goServices }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C">Services</a>
+          <a href="#" onClick="{{ goContact }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C">Contact</a>
+        </div>
+        <a href="tel:+18082201263" style="display:flex; align-items:center; height:46px; margin-left:8px; padding:0 22px; background:#E08C82; color:#22332C; text-decoration:none; font-size:19px; letter-spacing:0.02em; border-radius:14px; white-space:nowrap" style-hover="background:#CE7469">Call (808) 220-1263</a>
+        <sc-if value="{{ mobileNavOpen }}" hint-placeholder-val="{{ false }}">
+          <div class="mobile-menu-panel">
+            <a href="#" onClick="{{ goHome }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C; color:#1E332C">Home</a>
+            <a href="#" onClick="{{ goAbout }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C">About</a>
+            <a href="#" onClick="{{ goServices }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C">Services</a>
+            <a href="#" onClick="{{ goContact }}" style="display:flex; align-items:center; height:46px; padding:0 16px; font-size:18px; letter-spacing:0.04em; color:#1E332C; text-decoration:none; border-bottom:1px solid transparent; white-space:nowrap" style-hover="border-bottom:1px solid #1E332C">Contact</a>
+          </div>
+        </sc-if>
+      </nav>
+    </div>
+  </header>
+
+  <main style="flex:1">
+
+    <!-- ============================ HOME ============================ -->
+    <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+      <div>
+        <section style="max-width:1200px; min-height:calc(100vh - 75px); margin:0 auto; padding:52px 40px 48px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:44px">
+          <h1 class="hero-headline">Trusted non-emergency transportation across Oahu</h1>
+          <div class="hero-subtitles" aria-live="off">
+            <span>Serving the entire island of Oahu</span>
+            <span><em>Let's get you where you need to be — safely, comfortably, on time.</em></span>
+            <span>Open every day, 7:00 am – 9:00 pm</span>
+            <span>Wheelchair-accessible vehicle · Locally owned</span>
+            <span>Our purpose is to help kupuna and those who need transport</span>
+            <span>Get to destinations and appointments safely and on time</span>
+            <span>We want our customers to enjoy life and independence</span>
+            <span>With reliable transportation</span>
+          </div>
+          <a href="tel:+18082201263" data-m="cta" style="padding:18px 34px; background:#E08C82; color:#22332C; text-decoration:none; font-size:21px; letter-spacing:0.02em; border-radius:14px; box-shadow:0 16px 30px -22px rgba(30,51,44,0.7)" style-hover="background:#CE7469">Call (808) 220-1263</a>
+        </section>
+
+        <section style="max-width:1200px; margin:0 auto; padding:70px 40px">
+          <div data-m="card" style="background:#FCF8F0; border-radius:22px; box-shadow:0 30px 60px -45px rgba(30,51,44,0.8); padding:56px; display:grid; grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr); gap:56px; align-items:start">
+            <div>
+              <p style="margin:0 0 18px; font-size:14px; letter-spacing:0.28em; text-transform:uppercase; color:#5C7770">About us</p>
+              <h2 style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:46px; line-height:1.1">Committed to compassionate medical transport</h2>
+              <div style="width:64px; height:2px; background:#E4AC3E; margin:26px 0 0"></div>
+            </div>
+            <div>
+              <p data-m="lede" style="margin:0; font-size:22px; line-height:1.6">We are a locally owned, family run company, and we understand the unique needs of wheelchair users. Safety, comfort and timeliness come first on every trip — because we would want the same for our own ohana.</p>
+              <p data-m="lede" style="margin:22px 0 0; font-size:22px; line-height:1.6">Serving the entire island of Oahu, so our customers can enjoy their life and their independence — with rates that stay reasonable and fair.</p>
+              <p style="margin:26px 0 0; font-size:20px"><a href="#" onClick="{{ goAbout }}" style="color:#0F5C4C">Read more about us →</a></p>
+            </div>
+          </div>
+        </section>
+
+        <section style="max-width:1200px; margin:0 auto; padding:20px 40px 70px">
+          <h2 class="video-section-title">Why choose Thoughtful Transport</h2>
+          <p class="video-section-subtitle">Three things every family tells us matter most.</p>
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:26px">
+            <div data-m="card" style="background:#FCF8F0; border-radius:22px; padding:38px 34px; box-shadow:0 24px 50px -42px rgba(30,51,44,0.8); border-top:3px solid #E4AC3E">
+              <h3 style="margin:0 0 16px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:30px; line-height:1.2">Dedicated wheelchair vehicle</h3>
+              <p style="margin:0; font-size:19px; color:#33504A">We operate a fully equipped wheelchair-accessible vehicle that guarantees safety and comfort, making every ride smooth and secure.</p>
+            </div>
+            <div data-m="card" style="background:#FCF8F0; border-radius:22px; padding:38px 34px; box-shadow:0 24px 50px -42px rgba(30,51,44,0.8); border-top:3px solid #CF6A62">
+              <h3 style="margin:0 0 16px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:30px; line-height:1.2">A driver who helps</h3>
+              <p style="margin:0; font-size:19px; color:#33504A">Tyson, our operations manager and driver, can assist you into your wheelchair and offers compassionate, respectful help every step of the way.</p>
+            </div>
+            <div data-m="card" style="background:#FCF8F0; border-radius:22px; padding:38px 34px; box-shadow:0 24px 50px -42px rgba(30,51,44,0.8); border-top:3px solid #7FAFA1">
+              <h3 style="margin:0 0 16px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:30px; line-height:1.2">Timely &amp; reliable service</h3>
+              <p style="margin:0; font-size:19px; color:#33504A">Our scheduling is designed to respect your appointment times and ensure prompt pick-ups and arrivals across Oahu.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="background:rgba(252,248,240,0.72); border-top:1px solid rgba(30,51,44,0.12); border-bottom:1px solid rgba(30,51,44,0.12)">
+          <div style="max-width:1200px; margin:0 auto; padding:64px 40px; display:flex; align-items:center; justify-content:space-between; gap:36px; flex-wrap:wrap">
+            <div>
+              <h2 style="margin:0 0 12px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:44px">Ready when you are</h2>
+              <p style="margin:0; font-size:21px; color:#33504A; max-width:46ch">Call us and talk to a real person, or send your trip details and we'll get right back to you.</p>
+            </div>
+            <div data-m="btn-row" style="display:flex; gap:14px; flex-wrap:wrap">
+              <a href="tel:+18082201263" data-m="cta" style="padding:18px 30px; background:#E08C82; color:#22332C; text-decoration:none; font-size:21px; border-radius:14px" style-hover="background:#CE7469">Call (808) 220-1263</a>
+              <a href="#" onClick="{{ goContact }}" data-m="cta" style="padding:18px 30px; border:1px solid #1E332C; color:#1E332C; text-decoration:none; font-size:21px; border-radius:14px" style-hover="background:#1E332C; color:#FCF8F0">Request a ride</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </sc-if>
+
+    <!-- ============================ ABOUT ============================ -->
+    <sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <section style="max-width:1200px; margin:0 auto; padding:76px 40px 30px">
+          <div data-m="card" style="background:rgba(252,248,240,0.86); backdrop-filter:blur(14px); border:1px solid rgba(252,248,240,0.7); border-radius:28px; box-shadow:0 30px 60px -46px rgba(30,51,44,0.7); padding:44px 48px; width:fit-content; max-width:100%">
+            <p style="margin:0 0 20px; font-size:14px; letter-spacing:0.28em; text-transform:uppercase; color:#5C7770">About us</p>
+            <h1 style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:68px; line-height:1.05; max-width:19ch">A local family, driving for your family</h1>
+            <p data-m="lede" style="margin:26px 0 0; font-size:23px; color:#33504A; max-width:52ch">Thoughtful Transport LLC is a locally owned, family run company providing non-emergency, wheelchair-accessible transportation across the island of Oahu.</p>
+          </div>
+        </section>
+
+        <section style="max-width:1200px; margin:0 auto; padding:34px 40px 20px; display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr); gap:40px; align-items:center">
+          <div data-m="card" style="background:#FCF8F0; border-radius:22px; padding:48px 44px; box-shadow:0 28px 55px -45px rgba(30,51,44,0.8)">
+            <p data-m="lede" style="margin:0; font-size:22px; line-height:1.65">Thoughtful Transport is newly started, with a clear purpose: to help kupuna and anyone who needs extra accommodation get to their destinations and appointments safely and on time.</p>
+            <p data-m="lede" style="margin:22px 0 0; font-size:22px; line-height:1.65">We want our customers to enjoy their life and their independence, and reliable transportation is a big part of that. We understand this community because it is ours, and we strive to provide the service and care your loved ones and ohana deserve.</p>
+            <p data-m="lede" style="margin:22px 0 0; font-size:22px; line-height:1.65">Every ride is in a fully equipped wheelchair-accessible van. Tyson, our operations manager and driver, can assist you if you need help getting into your wheelchair — from the door you leave to the door you arrive at.</p>
+          </div>
+          <div data-m="photo" style="padding:16px; background:#FCF8F0; border-radius:22px; box-shadow:0 30px 60px -42px rgba(30,51,44,0.75); transform:rotate(1.5deg)">
+            <img src="assets/business-card.png" alt="Thoughtful Transport LLC business card showing the wheelchair-accessible van and phone number 808-220-1263" style="display:block; width:100%; height:auto" />
+          </div>
+        </section>
+
+        <section style="max-width:1200px; margin:0 auto; padding:56px 40px">
+          <div style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:24px">
+            <div data-m="card" style="background:rgba(252,248,240,0.86); border-radius:22px; padding:34px 32px; border-top:3px solid #CF6A62">
+              <h2 style="margin:0 0 12px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:28px">Locally owned &amp; family run</h2>
+              <p style="margin:0; font-size:19px; color:#33504A">Not a call center. You reach the same small team every time you phone.</p>
+            </div>
+            <div data-m="card" style="background:rgba(252,248,240,0.86); border-radius:22px; padding:34px 32px; border-top:3px solid #E4AC3E">
+              <h2 style="margin:0 0 12px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:28px">Meet Tyson</h2>
+              <p style="margin:0; font-size:19px; color:#33504A">Our operations manager and driver — the person who answers, plans your trip, and drives it.</p>
+            </div>
+            <div data-m="card" style="background:rgba(252,248,240,0.86); border-radius:22px; padding:34px 32px; border-top:3px solid #7FAFA1">
+              <h2 style="margin:0 0 12px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:28px">Hands-on help</h2>
+              <p style="margin:0; font-size:19px; color:#33504A">Tyson can assist you into your wheelchair and sees you safely to the door — not just the curb.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="max-width:1200px; margin:0 auto; padding:0 40px 80px">
+          <div data-m="card" style="background:#FCF8F0; border-radius:22px; padding:48px; box-shadow:0 28px 55px -45px rgba(30,51,44,0.8); display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap">
+            <p style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-size:34px; max-width:32ch">We would be glad to talk story about your trip.</p>
+            <a href="tel:+18082201263" data-m="cta" style="padding:18px 30px; background:#E08C82; color:#22332C; text-decoration:none; font-size:21px; border-radius:14px" style-hover="background:#CE7469">Call (808) 220-1263</a>
+          </div>
+        </section>
+      </div>
+    </sc-if>
+
+    <!-- ============================ SERVICES ============================ -->
+    <sc-if value="{{ isServices }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <section style="max-width:1200px; margin:0 auto; padding:76px 40px 30px">
+          <div data-m="card" style="background:rgba(252,248,240,0.86); backdrop-filter:blur(14px); border:1px solid rgba(252,248,240,0.7); border-radius:28px; box-shadow:0 30px 60px -46px rgba(30,51,44,0.7); padding:44px 48px; width:fit-content; max-width:100%">
+            <p style="margin:0 0 20px; font-size:14px; letter-spacing:0.28em; text-transform:uppercase; color:#5C7770">Services</p>
+            <h1 style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:68px; line-height:1.05; max-width:20ch">Wheelchair-accessible rides for wherever the day takes you</h1>
+            <p data-m="lede" style="margin:26px 0 0; font-size:23px; color:#33504A; max-width:52ch">Scheduled, non-emergency transportation across Oahu in a fully equipped wheelchair-accessible vehicle, with a driver trained to help door to door.</p>
+          </div>
+        </section>
+
+        <section style="max-width:1200px; margin:0 auto; padding:44px 40px 20px; display:grid; grid-template-columns:repeat(2, 1fr); gap:24px">
+          <article data-m="card" style="background:#FCF8F0; border-radius:22px; padding:38px 36px; box-shadow:0 24px 50px -42px rgba(30,51,44,0.8)">
+            <h2 style="margin:0 0 14px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:32px">Medical appointments</h2>
+            <p style="margin:0; font-size:19px; color:#33504A">Doctor visits, specialists, imaging, therapy and follow-ups — we build in time so you arrive unhurried and we wait or return as you prefer.</p>
+          </article>
+          <article data-m="card" style="background:#FCF8F0; border-radius:22px; padding:38px 36px; box-shadow:0 24px 50px -42px rgba(30,51,44,0.8)">
+            <h2 style="margin:0 0 14px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:32px">Dialysis &amp; recurring care</h2>
+            <p style="margin:0; font-size:19px; color:#33504A">Standing weekly schedules with the same familiar driver, so treatment days become one less thing to arrange.</p>
+          </article>
+          <article data-m="card" style="background:#FCF8F0; border-radius:22px; padding:38px 36px; box-shadow:0 24px 50px -42px rgba(30,51,44,0.8)">
+            <h2 style="margin:0 0 14px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:32px">Hospital &amp; care-home discharge</h2>
+            <p style="margin:0; font-size:19px; color:#33504A">Getting home, or moving between facilities, with careful handling and a calm pace at both ends of the trip.</p>
+          </article>
+          <article data-m="card" style="background:#FCF8F0; border-radius:22px; padding:38px 36px; box-shadow:0 24px 50px -42px rgba(30,51,44,0.8)">
+            <h2 style="margin:0 0 14px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:32px">Airport arrivals &amp; departures</h2>
+            <p style="margin:0; font-size:19px; color:#33504A">Curb-to-terminal help with luggage and timing for visiting family, at Daniel K. Inouye International and inter-island gates.</p>
+          </article>
+          <article data-m="card" style="background:#FCF8F0; border-radius:22px; padding:38px 36px; box-shadow:0 24px 50px -42px rgba(30,51,44,0.8)">
+            <h2 style="margin:0 0 14px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:32px">Errands, church &amp; family time</h2>
+            <p style="margin:0; font-size:19px; color:#33504A">Groceries, the salon, Sunday service, a birthday party at the beach park. Life is not only appointments.</p>
+          </article>
+          <article data-m="card" style="background:#FCF8F0; border-radius:22px; padding:38px 36px; box-shadow:0 24px 50px -42px rgba(30,51,44,0.8); border-top:3px solid #E4AC3E">
+            <h2 style="margin:0 0 14px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:32px">Rates</h2>
+            <p style="margin:0; font-size:19px; color:#33504A">We charge a base price, with additional charges that may apply based on distance. Our prices are reasonable and fair, and we quote your trip up front — no surprises. Call (808) 220-1263 and we'll price it with you.</p>
+          </article>
+        </section>
+
+        <section style="max-width:1200px; margin:0 auto; padding:60px 40px">
+          <h2 data-m="card" style="display:inline-block; background:rgba(252,248,240,0.86); backdrop-filter:blur(14px); border-radius:22px; padding:22px 32px; margin:0 0 34px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:44px">How a ride works</h2>
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:26px">
+            <div data-m="card" style="background:rgba(252,248,240,0.86); border-radius:22px; padding:34px 32px; border-left:2px solid #E4AC3E">
+              <p style="margin:0 0 10px; font-family:'Instrument Serif', Georgia, serif; font-size:44px; line-height:1; color:#7FAFA1">1</p>
+              <h3 style="margin:0 0 10px; font-size:22px">Tell us the trip</h3>
+              <p style="margin:0; font-size:19px; color:#33504A">Call or send the form with the date, times and both addresses.</p>
+            </div>
+            <div data-m="card" style="background:rgba(252,248,240,0.86); border-radius:22px; padding:34px 32px; border-left:2px solid #CF6A62">
+              <p style="margin:0 0 10px; font-family:'Instrument Serif', Georgia, serif; font-size:44px; line-height:1; color:#7FAFA1">2</p>
+              <h3 style="margin:0 0 10px; font-size:22px">We confirm the details</h3>
+              <p style="margin:0; font-size:19px; color:#33504A">Chair type, any help needed at the door, who to call when we arrive.</p>
+            </div>
+            <div data-m="card" style="background:rgba(252,248,240,0.86); border-radius:22px; padding:34px 32px; border-left:2px solid #7FAFA1">
+              <p style="margin:0 0 10px; font-family:'Instrument Serif', Georgia, serif; font-size:44px; line-height:1; color:#7FAFA1">3</p>
+              <h3 style="margin:0 0 10px; font-size:22px">We're there on the day</h3>
+              <p style="margin:0; font-size:19px; color:#33504A">On time, securely loaded, and with you until you're settled.</p>
+            </div>
+          </div>
+        </section>
+
+        <section style="max-width:1200px; margin:0 auto; padding:0 40px 80px">
+          <div data-m="card" style="background:#FCF8F0; border-radius:22px; padding:48px; box-shadow:0 28px 55px -45px rgba(30,51,44,0.8); display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap">
+            <p style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-size:34px; max-width:34ch">Not sure if we cover your trip? Ask — we probably do.</p>
+            <a href="tel:+18082201263" data-m="cta" style="padding:18px 30px; background:#E08C82; color:#22332C; text-decoration:none; font-size:21px; border-radius:14px" style-hover="background:#CE7469">Call (808) 220-1263</a>
+          </div>
+        </section>
+      </div>
+    </sc-if>
+
+    <!-- ============================ CONTACT ============================ -->
+    <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <section style="max-width:1200px; margin:0 auto; padding:76px 40px 40px">
+          <div data-m="card" style="background:rgba(252,248,240,0.86); backdrop-filter:blur(14px); border:1px solid rgba(252,248,240,0.7); border-radius:28px; box-shadow:0 30px 60px -46px rgba(30,51,44,0.7); padding:44px 48px; width:fit-content; max-width:100%">
+            <p style="margin:0 0 20px; font-size:14px; letter-spacing:0.28em; text-transform:uppercase; color:#5C7770">Contact</p>
+            <h1 style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:68px; line-height:1.05; max-width:18ch">Let's get you where you need to be</h1>
+            <p data-m="lede" style="margin:24px 0 0; font-size:23px; color:#33504A; max-width:52ch">Call and talk with us directly, or send the details below and we'll get right back to you.</p>
+          </div>
+        </section>
+
+        <section style="max-width:1200px; margin:0 auto; padding:20px 40px 90px; display:grid; grid-template-columns:minmax(0,0.8fr) minmax(0,1.2fr); gap:34px; align-items:start">
+          <aside style="background:#FCF8F0; border-radius:22px; padding:42px 38px; box-shadow:0 26px 55px -45px rgba(30,51,44,0.8)">
+            <h2 style="margin:0 0 6px; font-size:15px; letter-spacing:0.22em; text-transform:uppercase; color:#5C7770">Phone</h2>
+            <p style="margin:0 0 28px"><a href="tel:+18082201263" style="font-family:'Instrument Serif', Georgia, serif; font-size:40px; text-decoration:none; color:#1E332C">(808) 220-1263</a></p>
+            <h2 style="margin:0 0 6px; font-size:15px; letter-spacing:0.22em; text-transform:uppercase; color:#5C7770">Hours</h2>
+            <p style="margin:0 0 28px; font-size:21px">Monday – Sunday<br />7:00 am – 9:00 pm</p>
+            <h2 style="margin:0 0 6px; font-size:15px; letter-spacing:0.22em; text-transform:uppercase; color:#5C7770">Payment</h2>
+            <p style="margin:0 0 28px; font-size:21px">Credit, debit, cash &amp; Venmo</p>
+            <h2 style="margin:0 0 6px; font-size:15px; letter-spacing:0.22em; text-transform:uppercase; color:#5C7770">Service area</h2>
+            <p style="margin:0; font-size:19px; color:#33504A">The entire island of Oahu — Honolulu, Kalihi, Salt Lake, Aiea, Pearl City, Waipahu, Ewa Beach, Kapolei, Mililani, Wahiawa, Kaneohe, Kailua, Hawaii Kai, Waimanalo and the North Shore.</p>
+            <div style="margin-top:32px; padding-top:26px; border-top:1px solid rgba(30,51,44,0.14); font-size:19px; color:#33504A">This is scheduled, non-emergency transportation. For an emergency, call 911.</div>
+          </aside>
+
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <div style="background:#FCF8F0; border-radius:22px; padding:56px 48px; box-shadow:0 26px 55px -45px rgba(30,51,44,0.8); border-top:3px solid #E4AC3E">
+              <h2 style="margin:0 0 14px; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:40px">Mahalo — we've got it.</h2>
+              <p style="margin:0 0 28px; font-size:21px; color:#33504A">We'll call you back to confirm the details. If your ride is today, please phone us so we can move quickly.</p>
+              <a href="tel:+18082201263" style="padding:16px 26px; background:#E08C82; color:#22332C; text-decoration:none; font-size:20px; border-radius:14px" style-hover="background:#CE7469">Call (808) 220-1263</a>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+            <form onSubmit="{{ submit }}" style="background:#FCF8F0; border-radius:22px; padding:46px 44px; box-shadow:0 26px 55px -45px rgba(30,51,44,0.8); display:grid; gap:22px">
+              <h2 style="margin:0; font-family:'Instrument Serif', Georgia, serif; font-weight:400; font-size:36px">Request a ride</h2>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px">
+                <label style="display:grid; gap:8px; font-size:18px">Your name
+                  <input type="text" name="name" required="" style="padding:14px 15px; border:1px solid rgba(30,51,44,0.28); background:#FFFDF9; border-radius:14px" />
+                </label>
+                <label style="display:grid; gap:8px; font-size:18px">Phone number
+                  <input type="tel" name="phone" required="" style="padding:14px 15px; border:1px solid rgba(30,51,44,0.28); background:#FFFDF9; border-radius:14px" />
+                </label>
+              </div>
+              <label style="display:grid; gap:8px; font-size:18px">How you'd like to pay
+                <select name="payment" style="padding:14px 15px; border:1px solid rgba(30,51,44,0.28); background:#FFFDF9; border-radius:14px">
+                  <option>Credit card</option>
+                  <option>Debit card</option>
+                  <option>Cash</option>
+                  <option>Venmo</option>
+                  <option>Insurance — please advise</option>
+                </select>
+              </label>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px">
+                <label style="display:grid; gap:8px; font-size:18px">Pick-up address
+                  <input type="text" name="pickup" style="padding:14px 15px; border:1px solid rgba(30,51,44,0.28); background:#FFFDF9; border-radius:14px" />
+                </label>
+                <label style="display:grid; gap:8px; font-size:18px">Destination
+                  <input type="text" name="dropoff" style="padding:14px 15px; border:1px solid rgba(30,51,44,0.28); background:#FFFDF9; border-radius:14px" />
+                </label>
+              </div>
+              <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px">
+                <label style="display:grid; gap:8px; font-size:18px">Date
+                  <input type="date" name="date" style="padding:14px 15px; border:1px solid rgba(30,51,44,0.28); background:#FFFDF9; border-radius:14px" />
+                </label>
+                <label style="display:grid; gap:8px; font-size:18px">Pick-up time
+                  <input type="time" name="time" style="padding:14px 15px; border:1px solid rgba(30,51,44,0.28); background:#FFFDF9; border-radius:14px" />
+                </label>
+                <label style="display:grid; gap:8px; font-size:18px">Round trip?
+                  <select name="roundtrip" style="padding:14px 15px; border:1px solid rgba(30,51,44,0.28); background:#FFFDF9; border-radius:14px">
+                    <option>One way</option>
+                    <option>Round trip</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </label>
+              </div>
+              <label style="display:grid; gap:8px; font-size:18px">Mobility needs
+                <select name="mobility" style="padding:14px 15px; border:1px solid rgba(30,51,44,0.28); background:#FFFDF9; border-radius:14px">
+                  <option>Manual wheelchair</option>
+                  <option>Power wheelchair</option>
+                  <option>Walker or cane</option>
+                  <option>Ambulatory, needs assistance</option>
+                  <option>Other — I'll explain below</option>
+                </select>
+              </label>
+              <label style="display:grid; gap:8px; font-size:18px">Anything else we should know
+                <textarea name="notes" rows="4" style="padding:14px 15px; border:1px solid rgba(30,51,44,0.28); background:#FFFDF9; border-radius:14px; resize:vertical"></textarea>
+              </label>
+              <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-top:4px">
+                <button type="submit" data-m="cta" style="padding:18px 34px; background:#1E332C; color:#FCF8F0; border:none; font-size:21px; border-radius:14px; cursor:pointer" style-hover="background:#0F5C4C">Send request</button>
+                <span style="font-size:18px; color:#5C7770">Or call (808) 220-1263 — we answer.</span>
+              </div>
+            </form>
+          </sc-if>
+        </section>
+      </div>
+    </sc-if>
+
+  </main>
+
+  <footer style="background:#1E332C; color:#E8F0EC">
+    <div style="max-width:1200px; margin:0 auto; padding:64px 40px 30px; display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:44px">
+      <div>
+        <p style="margin:0 0 14px; font-family:'Great Vibes', cursive; font-size:42px; line-height:1.1; color:#FCF8F0">Thoughtful Transport</p>
+        <p style="margin:0; font-size:19px; color:#B9CCC5; max-width:38ch">Locally owned, non-emergency wheelchair-accessible transportation serving the entire island of Oahu, Hawaii.</p>
+      </div>
+      <div>
+        <p style="margin:0 0 14px; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#8FAAA2">Pages</p>
+        <div style="display:grid; gap:10px; font-size:19px">
+          <a href="#" onClick="{{ goHome }}" style="color:#E8F0EC; text-decoration:none" style-hover="color:#E4AC3E">Home</a>
+          <a href="#" onClick="{{ goAbout }}" style="color:#E8F0EC; text-decoration:none" style-hover="color:#E4AC3E">About</a>
+          <a href="#" onClick="{{ goServices }}" style="color:#E8F0EC; text-decoration:none" style-hover="color:#E4AC3E">Services</a>
+          <a href="#" onClick="{{ goContact }}" style="color:#E8F0EC; text-decoration:none" style-hover="color:#E4AC3E">Contact</a>
+        </div>
+      </div>
+      <div>
+        <p style="margin:0 0 14px; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#8FAAA2">Get in touch</p>
+        <div style="display:grid; gap:10px; font-size:19px">
+          <a href="tel:+18082201263" style="color:#E8F0EC; text-decoration:none" style-hover="color:#E4AC3E">(808) 220-1263</a>
+          <span style="color:#B9CCC5">Mon – Sun, 7:00 am – 9:00 pm</span>
+          <span style="color:#B9CCC5">Accepts credit, debit, cash &amp; Venmo</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1200px; margin:0 auto; padding:22px 40px 40px; border-top:1px solid rgba(232,240,236,0.16); font-size:17px; color:#8FAAA2">
+      <p style="margin:0">Non-emergency medical transport on Oahu · Honolulu · Kaneohe · Kailua · Aiea · Pearl City · Waipahu · Ewa Beach · Kapolei · Mililani · Wahiawa</p>
+      <p style="margin:10px 0 0">© Copyright Thoughtful Transport LLC. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showHibiscus&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Home page&quot;}}">
+class Component extends DCLogic {
+  state = { page: 'home', sent: false, mobileNavOpen: false };
+
+  nav(page) {
+    return (e) => {
+      if (e) e.preventDefault();
+      this.setState({ page, mobileNavOpen: false });
+      window.scrollTo({ top: 0 });
+    };
+  }
+
+  renderVals() {
+    const { page, sent, mobileNavOpen } = this.state;
+    return {
+      isHome: page === 'home',
+      isAbout: page === 'about',
+      isServices: page === 'services',
+      isContact: page === 'contact',
+      sent,
+      mobileNavOpen,
+      showForm: !sent,
+      showHibiscus: this.props.showHibiscus ?? true,
+      showDecorativeHibiscus: page !== 'home' && (this.props.showHibiscus ?? true),
+      goHome: this.nav('home'),
+      goServices: this.nav('services'),
+      goContact: this.nav('contact'),
+      goAbout: this.nav('about'),
+      toggleMobileNav: (e) => { if (e) e.preventDefault(); this.setState({ mobileNavOpen: !mobileNavOpen }); },
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); window.scrollTo({ top: 0 }); }
+    };
+  }
+}
+</script>
+<script>
+(() => {
+  const safelyPlay = (video) => {
+    const playAttempt = video.play();
+    if (playAttempt && typeof playAttempt.catch === 'function') {
+      playAttempt.catch(() => {});
+    }
+  };
+
+  const playHomeBackgroundVideo = () => {
+    const video = document.querySelector('[data-home-bg-video]');
+    if (!video) return;
+    if (video.dataset.loopReady !== 'true') {
+      video.dataset.loopReady = 'true';
+      video.addEventListener('ended', () => {
+        video.currentTime = 0;
+        safelyPlay(video);
+      });
+      video.addEventListener('timeupdate', () => {
+        if (video.duration && video.duration - video.currentTime < 0.18) {
+          video.currentTime = 0;
+          safelyPlay(video);
+        }
+      });
+    }
+    video.loop = true;
+    video.muted = true;
+    video.playsInline = true;
+    safelyPlay(video);
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    playHomeBackgroundVideo();
+    new MutationObserver(playHomeBackgroundVideo)
+      .observe(document.body, { childList: true, subtree: true });
+  });
+  window.addEventListener('pageshow', playHomeBackgroundVideo);
+})();
+</script>
+</body>
+</html>
