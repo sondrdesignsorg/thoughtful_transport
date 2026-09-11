@@ -70,7 +70,7 @@ export async function submitInquiry(
 
   const apiKey = process.env.RESEND_API_KEY;
   const businessEmail = process.env.BUSINESS_EMAIL;
-  const fromEmail = process.env.INQUIRY_FROM_EMAIL ?? "Thoughtful Transport Website <onboarding@resend.dev>";
+  const fromEmail = process.env.INQUIRY_FROM_EMAIL ?? "Thoughtful Transport Website <inquiries@send.thoughtfultransport.net>";
 
   const safe = {
     name: escapeHtml(name),
@@ -122,6 +122,7 @@ export async function submitInquiry(
         },
         body,
         cache: "no-store",
+        signal: AbortSignal.timeout(10_000),
       });
       const result = await response.json() as { data?: { submitForm?: { success?: boolean } } };
 
@@ -150,6 +151,7 @@ export async function submitInquiry(
         to: [businessEmail],
         reply_to: email,
         subject: `Website information inquiry: ${topic}`,
+        text: plainTextMessage,
         html: `
           <div style="font-family:Arial,sans-serif;max-width:640px;color:#1e332c;line-height:1.6">
             <h1 style="font-size:24px">New information inquiry</h1>
@@ -165,6 +167,7 @@ export async function submitInquiry(
         `,
       }),
       cache: "no-store",
+      signal: AbortSignal.timeout(10_000),
     });
 
     if (!response.ok) {
