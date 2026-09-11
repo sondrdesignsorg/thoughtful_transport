@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
-html, body { margin:0; padding:0; }
+html, body { margin:0; padding:0; overflow-x:hidden; }
 * { box-sizing:border-box; }
 body::before { content:""; position:fixed; inset:0; z-index:-2; background:#BEE0D6 url("/assets/bg-watercolor.jpg") center top/cover; }
 body { background:#BEE0D6 url("/assets/bg-watercolor.jpg") center top/cover scroll; color:#1E332C; font-family:"Newsreader", Georgia, serif; font-size:20px; line-height:1.65; text-wrap:pretty; -webkit-font-smoothing:antialiased; }
 a { color:#0F5C4C; text-decoration-thickness:1px; text-underline-offset:3px; }
 a:hover { color:#B4534C; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline:3px solid #0F5C4C; outline-offset:3px; }
 ::selection { background:#F0C79A; }
 input, textarea, select, button { color:#1E332C; font-family:"Newsreader", Georgia, serif; font-size:19px; }
 img { max-width:100%; }
@@ -114,18 +115,26 @@ main img { border-radius:14px; }
 .contact-detail { margin:0 0 28px; font-size:21px; }
 .service-area { margin:0; color:#33504A; font-size:19px; }
 .emergency { margin-top:32px; padding-top:26px; color:#33504A; font-size:19px; border-top:1px solid rgba(30,51,44,.14); }
-.ride-form { padding:46px 44px; display:grid; gap:22px; background:#FCF8F0; border-radius:22px; box-shadow:0 26px 55px -45px rgba(30,51,44,.8); }
-.ride-form h2 { margin:0; font-family:"Instrument Serif", Georgia, serif; font-size:36px; font-weight:400; }
-.ride-form label { display:grid; gap:8px; font-size:18px; }
-.ride-form input, .ride-form select, .ride-form textarea { width:100%; padding:14px 15px; background:#FFFDF9; border:1px solid rgba(30,51,44,.28); border-radius:14px; }
-.ride-form textarea { resize:vertical; }
+.contact-help { margin:-18px 0 28px; color:#5C7770; font-size:17px; }
+.inquiry-form { padding:46px 44px; display:grid; gap:22px; background:#FCF8F0; border-radius:22px; box-shadow:0 26px 55px -45px rgba(30,51,44,.8); }
+.inquiry-form h2 { margin:0; font-family:"Instrument Serif", Georgia, serif; font-size:36px; font-weight:400; }
+.inquiry-form .eyebrow { margin-bottom:8px; }
+.form-intro { margin:8px 0 0; color:#5C7770; font-size:18px; }
+.booking-notice { padding:18px 20px; display:grid; gap:3px; background:#F8E9D5; border-left:4px solid #E4AC3E; border-radius:12px; font-size:17px; line-height:1.45; }
+.inquiry-form label { display:grid; gap:8px; font-size:18px; }
+.inquiry-form input, .inquiry-form select, .inquiry-form textarea { width:100%; min-height:52px; padding:14px 15px; background:#FFFDF9; border:1px solid rgba(30,51,44,.34); border-radius:12px; }
+.inquiry-form textarea { min-height:150px; resize:vertical; }
+.honeypot { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
 .form-grid { display:grid; gap:22px; }
 .form-grid.two { grid-template-columns:1fr 1fr; }
 .form-grid.three { grid-template-columns:1fr 1fr 1fr; }
 .form-actions { display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-top:4px; }
 .form-actions button { padding:18px 34px; color:#FCF8F0; background:#1E332C; border:0; border-radius:14px; font-size:21px; cursor:pointer; }
 .form-actions button:hover { background:#0F5C4C; }
+.form-actions button:disabled { cursor:wait; opacity:.68; }
 .form-actions span { color:#5C7770; font-size:18px; }
+.form-status { margin:0; padding:14px 16px; border-radius:10px; font-size:17px; }
+.form-status.error { color:#742D2A; background:#F8E2DF; border:1px solid #DCAAA4; }
 .confirmation-card { padding:56px 48px; background:#FCF8F0; border-radius:22px; border-top:3px solid #E4AC3E; box-shadow:0 26px 55px -45px rgba(30,51,44,.8); }
 .confirmation-card h2 { margin:0 0 14px; font-family:"Instrument Serif", Georgia, serif; font-size:40px; font-weight:400; }
 .confirmation-card p { margin:0 0 28px; color:#33504A; font-size:21px; }
@@ -160,20 +169,21 @@ main img { border-radius:14px; }
 }
 
 @media (max-width:700px) {
-  body { font-size:19px; }
-  main h1 { font-size:38px !important; line-height:1.2 !important; letter-spacing:.01em !important; }
+  body { font-size:18px; }
+  main h1 { font-size:36px !important; line-height:1.12 !important; letter-spacing:.01em !important; }
   main h2 { font-size:28px !important; }
   main h3 { font-size:24px !important; }
   .lede { font-size:20px !important; }
-  main section { padding:36px 20px !important; }
-  .responsive-card, main article, main aside, main form { width:auto !important; padding:26px 22px !important; }
-  .hero-headline { font-size:51px; }
-  .hero-subtitles { min-height:118px; }
-  .hero-subtitles span { padding:0; font-size:26px; }
+  main section { padding:32px 16px !important; }
+  .responsive-card, main article, main aside, main form { width:auto !important; padding:24px 20px !important; border-radius:18px; }
+  .home-hero { min-height:calc(100svh - 75px); justify-content:center; gap:28px; padding-top:30px !important; padding-bottom:34px !important; }
+  .hero-headline { font-size:44px !important; line-height:1.08 !important; transform:none; }
+  .hero-subtitles { min-height:104px; transform:none; }
+  .hero-subtitles span { padding:0; font-size:24px; line-height:1.22; }
   .video-section-title { font-size:34px; }
   .video-section-subtitle { margin-bottom:30px; font-size:22px; }
   .photo-card { padding:10px !important; transform:none; }
-  .cta { display:block; width:100%; }
+  .cta { display:block; width:100%; min-height:54px; padding:14px 20px; }
   .button-row { flex-direction:column; align-items:stretch; width:100%; }
   .contact-phone a { font-size:32px; }
   .header-inner { display:grid; grid-template-columns:minmax(0,1fr) 52px; align-items:center; gap:10px; padding:10px 16px 12px; }
@@ -182,11 +192,27 @@ main img { border-radius:14px; }
   .desktop-nav-links, .desktop-call-link { display:none; }
   .mobile-menu-toggle { display:flex; grid-column:2; grid-row:1; justify-self:end; width:52px; height:52px; padding:0; flex-direction:column; align-items:center; justify-content:center; color:#1E332C; background:#FCF8F0; border:1px solid rgba(30,51,44,.24); border-radius:12px; cursor:pointer; }
   .mobile-menu-toggle span { display:block; width:22px; height:2px; margin:3px 0; background:currentColor; }
+  .mobile-menu-toggle.open span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
+  .mobile-menu-toggle.open span:nth-child(2) { opacity:0; }
+  .mobile-menu-toggle.open span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
+  .mobile-menu-toggle span { transition:transform .2s ease, opacity .2s ease; }
   .main-nav { display:contents; }
   .mobile-menu-panel { display:grid; grid-column:1/-1; grid-row:3; grid-template-columns:1fr; gap:6px; width:100%; padding-top:4px; }
-  .mobile-menu-panel a { display:flex; grid-column:1/-1; align-items:center; justify-content:center; height:44px; min-width:0; padding:0 10px; color:#1E332C; background:rgba(252,248,240,.94); border-radius:10px; font-size:15px; letter-spacing:0; text-decoration:none; }
+  .mobile-menu-panel a { display:flex; grid-column:1/-1; align-items:center; justify-content:center; min-height:48px; min-width:0; padding:8px 10px; color:#1E332C; background:rgba(252,248,240,.94); border-radius:10px; font-size:17px; letter-spacing:0; text-decoration:none; }
+  .mobile-menu-panel a.active { box-shadow:inset 0 0 0 2px rgba(30,51,44,.38); }
   .mobile-menu-panel a[href^="tel"] { width:100%; height:52px; color:#22332C; background:#E08C82; font-size:18px; }
   .form-grid.two, .form-grid.three { grid-template-columns:1fr; }
+  .inquiry-form { gap:20px; }
+  .inquiry-form input, .inquiry-form select, .inquiry-form textarea { font-size:16px; }
+  .booking-notice { padding:16px; }
+  .form-actions { align-items:stretch; }
+  .form-actions button { width:100%; min-height:54px; padding:14px 18px; }
+  .form-actions span { font-size:16px; line-height:1.45; }
+  .contact-layout { gap:20px; }
+  .contact-layout .inquiry-form, .contact-layout .confirmation-card { order:1; }
+  .contact-layout .contact-card { order:2; }
+  .contact-phone { margin-bottom:20px; }
+  .contact-phone a { display:inline-flex; min-height:48px; align-items:center; }
   .footer-inner, .footer-bottom { padding:36px 20px 20px; }
   .footer-brand { font-size:34px; }
   .hibiscus { width:74vw; right:-24vw; bottom:-14vw; opacity:.55; }
