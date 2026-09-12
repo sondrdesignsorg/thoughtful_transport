@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://ttredesign.vercel.app";
+const baseUrl = "https://thoughtfultransport.net";
 export default function sitemap(): MetadataRoute.Sitemap {
   return ["", "/about", "/services", "/contact", "/privacy", "/terms", "/accessibility", "/security"].map((path) => ({
     url: `${baseUrl}${path}`,
