@@ -15,12 +15,7 @@ const inquiryTopics = new Set([
   "Something else",
 ]);
 const contactPreferences = new Set(["Email", "Phone", "Either is fine"]);
-const existingBusinessForm = {
-  endpoint: "https://www.thoughtfultransport.net/wp-admin/admin-ajax.php?action=gox_form_module_submit",
-  formId: "bb14f09f-66cb-4e40-a1e6-9af02289f140",
-  contactFieldId: "bb14f09f-66cb-4e40-a1e6-9af02289f140input0",
-  messageFieldId: "bb14f09f-66cb-4e40-a1e6-9af02289f140input1",
-};
+const minimumFillTimeMs = 3000;
 
 function readField(formData: FormData, name: string) {
   return String(formData.get(name) ?? "").trim();
@@ -46,10 +41,20 @@ export async function submitInquiry(
   const preferredContact = readField(formData, "preferredContact");
   const message = readField(formData, "message");
   const website = readField(formData, "website");
+  const submittedAtRaw = readField(formData, "submittedAt");
 
   // Bots tend to fill this visually hidden field. Return success so they do not retry.
   if (website) {
     return { status: "success", message: "Mahalo — your inquiry has been sent." };
+  }
+
+  // Bots submit faster than a person can fill the form. Absent field means JS is
+  // unavailable, so let it through and rely on edge rate limiting.
+  if (submittedAtRaw) {
+    const submittedAt = Number(submittedAtRaw);
+    if (!Number.isFinite(submittedAt) || Date.now() - submittedAt < minimumFillTimeMs) {
+      return { status: "success", message: "Mahalo — your inquiry has been sent." };
+    }
   }
 
   if (!name || !email || !topic || !message) {
@@ -96,47 +101,10 @@ export async function submitInquiry(
 
   try {
     if (!apiKey || !businessEmail) {
-      const payload = {
-        formId: existingBusinessForm.formId,
-        formData: [
-          {
-            id: existingBusinessForm.contactFieldId,
-            type: "text",
-            value: `${name} <${email}>${phone ? ` · ${phone}` : ""}`,
-            isRequired: "true",
-          },
-          {
-            id: existingBusinessForm.messageFieldId,
-            type: "textarea",
-            value: plainTextMessage,
-            isRequired: "false",
-          },
-        ],
-      };
-      const body = new URLSearchParams({ data: JSON.stringify(payload) });
-      const response = await fetch(existingBusinessForm.endpoint, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-        },
-        body,
-        cache: "no-store",
-        signal: AbortSignal.timeout(10_000),
-      });
-      const result = await response.json() as { data?: { submitForm?: { success?: boolean } } };
-
-      if (!response.ok || result.data?.submitForm?.success !== true) {
-        console.error("Existing business inquiry notification failed", response.status, result);
-        return {
-          status: "error",
-          message: "We could not send your inquiry right now. Please call (808) 220-1263 and we’ll be glad to help.",
-        };
-      }
-
+      console.error("Inquiry notification misconfigured: RESEND_API_KEY or BUSINESS_EMAIL missing");
       return {
-        status: "success",
-        message: "Mahalo — your inquiry has been sent. We’ll get back to you soon.",
+        status: "error",
+        message: "We could not send your inquiry right now. Please call (808) 220-1263 and we’ll be glad to help.",
       };
     }
 
