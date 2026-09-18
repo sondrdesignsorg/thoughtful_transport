@@ -5,7 +5,9 @@ const compat = new FlatCompat({ baseDirectory: import.meta.dirname });
 const config = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
-    ignores: [".next/**", "node_modules/**", "next-env.d.ts", "image-slot.js", "support.js", "Thoughtful Transport.dc.html"],
+    ignores: [".next/**", "node_modules/**", "next-env.d.ts", "public/**"],
+  },
+  {
     rules: {
       "@next/next/no-page-custom-font": "off",
     },
