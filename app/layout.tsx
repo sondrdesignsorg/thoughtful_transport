@@ -1,10 +1,34 @@
 import type { Metadata } from "next";
+import { Great_Vibes, Instrument_Serif, Newsreader } from "next/font/google";
 import "./globals.css";
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-newsreader",
+  display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument-serif",
+  display: "swap",
+});
+
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-great-vibes",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thoughtfultransport.net"),
   title: {
-    default: "Thoughtful Transport LLC | Wheelchair Transportation on Oahu",
+    default: "Wheelchair Transportation on Oahu | Thoughtful Transport",
     template: "%s",
   },
   description: "Trusted non-emergency, wheelchair-accessible transportation across Oahu. Locally owned. Call (808) 220-1263.",
@@ -14,12 +38,7 @@ export const dynamic = "force-dynamic";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="en" className={`${newsreader.variable} ${instrumentSerif.variable} ${greatVibes.variable}`}>
       <body>{children}</body>
     </html>
   );

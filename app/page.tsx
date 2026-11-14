@@ -3,7 +3,7 @@ import { pageMetadata } from "./seo";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Thoughtful Transport LLC | Wheelchair Transportation on Oahu, HI",
+  title: "Wheelchair Transportation on Oahu | Thoughtful Transport",
   description: "Trusted non-emergency, wheelchair-accessible transportation across Oahu. Locally owned and family run. Open daily 7am–9pm. Call (808) 220-1263.",
   path: "/",
 });
@@ -16,8 +16,8 @@ const localBusinessSchema = {
   description: "Locally owned, non-emergency wheelchair-accessible transportation serving the entire island of Oahu, Hawaii.",
   url: "https://thoughtfultransport.net",
   telephone: "+1-808-220-1263",
-  image: "https://thoughtfultransport.net/assets/business-card.png",
-  logo: "https://thoughtfultransport.net/icon.svg",
+  image: "https://thoughtfultransport.net/assets/business-card.webp",
+  logo: "https://thoughtfultransport.net/logo-512.png",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Honolulu",
@@ -31,10 +31,24 @@ const localBusinessSchema = {
     opens: "07:00",
     closes: "21:00",
   }],
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "Oahu, Hawaii",
-  },
+  areaServed: [
+    { "@type": "AdministrativeArea", name: "Oahu, Hawaii" },
+    { "@type": "City", name: "Honolulu" },
+    { "@type": "City", name: "Kalihi" },
+    { "@type": "City", name: "Salt Lake" },
+    { "@type": "City", name: "Aiea" },
+    { "@type": "City", name: "Pearl City" },
+    { "@type": "City", name: "Waipahu" },
+    { "@type": "City", name: "Ewa Beach" },
+    { "@type": "City", name: "Kapolei" },
+    { "@type": "City", name: "Mililani" },
+    { "@type": "City", name: "Wahiawa" },
+    { "@type": "City", name: "Kaneohe" },
+    { "@type": "City", name: "Kailua" },
+    { "@type": "City", name: "Hawaii Kai" },
+    { "@type": "City", name: "Waimanalo" },
+    { "@type": "Place", name: "North Shore, Oahu" },
+  ],
   paymentAccepted: "Cash, Credit Card, Debit Card, Venmo",
   priceRange: "$$",
   hasOfferCatalog: {
